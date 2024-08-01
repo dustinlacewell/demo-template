@@ -1,0 +1,29 @@
+{
+  "name": "demo",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.12.3",
+    "@astrojs/check": "^0.9.1",
+    "typescript": "^5.5.4",
+    "@ldlework/demo-lib-react": "workspace:*",
+    "@astrojs/react": "~3.6.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@astrojs/tailwind": "^5.1.0",
+    "tailwindcss": "^3.4.7",
+    "three": "~0.167.0",
+    "camera-controls": "~2.8.5"
+  },
+  "devDependencies": {
+    "@types/three": "~0.167.1",
+    "@types/react": "~18.3.3"
+  }
+}
