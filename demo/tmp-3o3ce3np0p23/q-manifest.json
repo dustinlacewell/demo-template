@@ -1,0 +1,70 @@
+{
+  "manifestHash": "42zjac",
+  "symbols": {
+    "s_0K2SsqhWRbA": {
+      "origin": "qwik/CanvasTest.tsx",
+      "displayName": "QCanvasTest_component",
+      "canonicalFilename": "s_0k2ssqhwrba",
+      "hash": "0K2SsqhWRbA",
+      "ctxKind": "function",
+      "ctxName": "component$",
+      "captures": false,
+      "loc": [
+        291,
+        2497
+      ]
+    }
+  },
+  "mapping": {
+    "s_0K2SsqhWRbA": "q-CfyKAGHj.js"
+  },
+  "bundles": {
+    "q-0zIyykcT.js": {
+      "size": 62182,
+      "dynamicImports": [
+        "q-CfyKAGHj.js"
+      ],
+      "origins": [
+        "../common/temp/node_modules/.pnpm/@builder.io+qwik@1.7.3/node_modules/@builder.io/qwik/dist/core.prod.mjs",
+        "@builder.io/qwik/build",
+        "src/qwik/CanvasTest.tsx"
+      ]
+    },
+    "q-CfyKAGHj.js": {
+      "size": 758,
+      "imports": [
+        "q-0zIyykcT.js"
+      ],
+      "origins": [
+        "../libs/demo-lib-qwik/lib/index.qwik.mjs",
+        "src/qwik/s_0k2ssqhwrba.js"
+      ],
+      "symbols": [
+        "s_0K2SsqhWRbA"
+      ]
+    },
+    "q-DCmTRHS5.js": {
+      "size": 62,
+      "imports": [
+        "q-0zIyykcT.js"
+      ]
+    }
+  },
+  "injections": [],
+  "version": "1",
+  "options": {
+    "target": "client",
+    "buildMode": "production",
+    "entryStrategy": {
+      "type": "hook"
+    }
+  },
+  "platform": {
+    "qwik": "1.7.3",
+    "vite": "",
+    "rollup": "4.19.1",
+    "env": "node",
+    "os": "win32",
+    "node": "18.20.3"
+  }
+}

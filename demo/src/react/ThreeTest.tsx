@@ -1,3 +1,4 @@
+/** @jsxImportSource react */
 import React, { useRef, useEffect, useCallback, useMemo } from 'react'
 import { Three } from '@ldlework/demo-lib-react'
 import * as THREE from 'three'

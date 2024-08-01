@@ -1,7 +1,7 @@
 ---
+import { QCanvasTest } from "@/qwik/CanvasTest";
 import { CanvasTest } from "@/react/CanvasTest";
 import { ThreeTest } from "@/react/ThreeTest";
-import "@ldlework/demo-lib-react/dist/style.css";
 ---
 
 <html lang="en">
@@ -12,8 +12,13 @@ import "@ldlework/demo-lib-react/dist/style.css";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body class="flex items-center justify-center w-full h-[100vh]">
-		<CanvasTest client:visible />
-		<ThreeTest client:visible />
+	<body class="flex flex-col items-center justify-center w-full h-[100vh]">
+		<div class="flex items-center justify-center w-full h-[100vh]">
+			<CanvasTest client:visible />
+			<ThreeTest client:visible />
+		</div>
+		<div class="flex items-center justify-center w-full h-[100vh]">
+			<QCanvasTest />
+		</div>
 	</body>
 </html>

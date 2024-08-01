@@ -1,3 +1,4 @@
+/** @jsxImportSource react */
 import { Canvas } from '@ldlework/demo-lib-react'
 import React, { useState, useCallback, useRef } from 'react';
 
