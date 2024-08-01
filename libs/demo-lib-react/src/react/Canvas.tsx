@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, ReactNode } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 
 interface CanvasProps {
     setup?: (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => void

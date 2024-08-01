@@ -17,7 +17,7 @@ export const Three: React.FC<ThreeCanvasProps> = ({
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const clockRef = useRef(new THREE.Clock());
-  const [dimensions, setDimensions] = useState<Dimensions>({ width: 0, height: 0 });
+  const [_, setDimensions] = useState<Dimensions>({ width: 0, height: 0 });
 
   useEffect(() => {
     const container = containerRef.current;
