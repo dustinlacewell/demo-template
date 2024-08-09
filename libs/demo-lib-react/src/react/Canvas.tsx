@@ -14,12 +14,16 @@ export const Canvas: React.FC<CanvasProps> = ({
     setup,
     draw,
 }) => {
+    const containerRef = useRef<HTMLDivElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null)
-    const [dimensions, setDimensions] = useState<Dimensions>({ width: 0, height: 0 })
+    const [_, setDimensions] = useState<Dimensions>({ width: 0, height: 0 })
 
     useEffect(() => {
+        const container = containerRef.current
         const canvas = canvasRef.current
+
         if (!canvas) return
+        if (!container) return
 
         const ctx = canvas.getContext('2d')
         if (!ctx) return
@@ -29,8 +33,8 @@ export const Canvas: React.FC<CanvasProps> = ({
 
         const handleResize = () => {
             const scale = window.devicePixelRatio
-            const width = canvas.parentElement?.clientWidth ?? 0
-            const height = canvas.parentElement?.clientHeight ?? 0
+            const width = container.clientWidth
+            const height = container.clientHeight
 
             setDimensions({ width, height })
 
@@ -67,14 +71,9 @@ export const Canvas: React.FC<CanvasProps> = ({
     }, [setup, draw])
 
     return (
-        <div className="canvas-container overflow-hidden rounded-[5px] w-full h-full flex flex-col items-stretch shadow-lg shadow-neutral-400 dark:shadow-none dark:border-[1px] dark:border-neutral-300">
+        <div ref={containerRef} className="canvas-container w-full h-full flex flex-col items-stretch justify-stretch overflow-hidden">
             <canvas
-                ref={canvasRef}
-                style={{
-                    width: `${dimensions.width}px`,
-                    height: `${dimensions.height}px`,
-                }}
-            />
+                ref={canvasRef} />
         </div>
     )
 }

@@ -2,9 +2,7 @@
   "name": "@ldlework/demo-lib-qwik",
   "version": "0.0.1",
   "description": "Create a Qwik library",
-  "type": "module",
-  "main": "./lib/index.qwik.cjs",
-  "module": "./lib/index.qwik.mjs",
+  "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",
   "types": "./lib-types/index.d.ts",
   "exports": {
@@ -22,6 +20,7 @@
     "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
   },
   "private": false,
+  "type": "module",
   "scripts": {
     "build": "qwik build",
     "build.lib": "vite build --mode lib",
@@ -36,12 +35,8 @@
     "test": "echo \"No test specified\" && exit 0",
     "qwik": "qwik"
   },
-  "peerDependencies": {
-    "@builder.io/qwik": "~1.7.3",
-    "three": "~0.167.0"
-  },
   "devDependencies": {
-    "@builder.io/qwik": "~1.7.3",
+    "@builder.io/qwik": "~1.8.0",
     "@types/eslint": "^8.56.10",
     "@types/node": "^20.12.7",
     "@typescript-eslint/eslint-plugin": "^7.7.1",
@@ -49,13 +44,12 @@
     "eslint": "^8.57.0",
     "eslint-plugin-qwik": "latest",
     "np": "^8.0.4",
+    "rollup-plugin-postcss": "~4.0.2",
+    "tailwindcss": "^3.4.7",
     "prettier": "^3.2.5",
     "typescript": "5.4.5",
     "undici": "*",
     "vite": "^5.2.10",
-    "vite-tsconfig-paths": "^4.2.1",
-    "tailwindcss": "~3.4.7",
-    "vite-plugin-dts": "~4.0.0-beta.2",
-    "@types/three": "~0.167.1"
+    "vite-tsconfig-paths": "^4.2.1"
   }
 }

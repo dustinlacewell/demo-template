@@ -23,7 +23,8 @@
     "three": "~0.167.0",
     "camera-controls": "~2.8.5",
     "@qwikdev/astro": "~0.6.2",
-    "@builder.io/qwik": "~1.7.3"    
+    "@builder.io/qwik": "~1.8.0",
+    "@builder.io/qwik-react": "~0.5.5"    
   },
   "devDependencies": {
     "@types/three": "~0.167.1",

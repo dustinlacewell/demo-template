@@ -1,8 +1,9 @@
 /** @jsxImportSource react */
-import React, { useRef, useEffect, useCallback, useMemo } from 'react'
+import React, { useRef, useCallback, useMemo } from 'react'
 import { Three } from '@ldlework/demo-lib-react'
 import * as THREE from 'three'
 import CameraControls from 'camera-controls'
+import { qwikify$ } from '@builder.io/qwik-react'
 
 interface Particle {
   position: THREE.Vector3
@@ -12,7 +13,7 @@ interface Particle {
   mesh: THREE.Mesh
 }
 
-export const ThreeTest: React.FC = () => {
+const ThreeTest: React.FC = () => {
   const particlesRef = useRef<Particle[]>([])
   const particleSystemRef = useRef<THREE.Group | null>(null)
   const controlsRef = useRef<CameraControls | null>(null)
@@ -109,3 +110,5 @@ export const ThreeTest: React.FC = () => {
 
   return <Three setup={setup} draw={draw} />
 }
+
+export default qwikify$(ThreeTest, { clientOnly: true })

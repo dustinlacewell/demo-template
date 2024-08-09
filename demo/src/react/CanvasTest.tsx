@@ -1,6 +1,7 @@
 /** @jsxImportSource react */
+import { qwikify$ } from '@builder.io/qwik-react'
 import { Canvas } from '@ldlework/demo-lib-react'
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useCallback, useRef } from 'react';
 
 
 interface Particle {
@@ -12,7 +13,7 @@ interface Particle {
   life: number;
 }
 
-export const CanvasTest: React.FC = () => {
+const CanvasTest: React.FC = () => {
   const particlesRef = useRef<Particle[]>([]);
 
   const createParticle = useCallback((centerX: number, centerY: number, radius: number): Particle => {
@@ -61,7 +62,7 @@ export const CanvasTest: React.FC = () => {
     }
   }, [createParticle]);
 
-  return (
-    <Canvas draw={draw} />
-  );
+  return <Canvas draw={draw} />
 };
+
+export default qwikify$(CanvasTest, { clientOnly: true });

@@ -1,0 +1,13 @@
+/* add tailwind imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* make all qwik-react tags use display: content */
+qwik-react {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+}
