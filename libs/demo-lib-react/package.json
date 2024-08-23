@@ -44,5 +44,8 @@
     "typescript": "5.4.2",
     "vite-plugin-dts": "~4.0.0-beta.2",
     "vite": "^5.3.5"
+  },
+  "dependencies": {
+    "camera-controls": "~2.8.5"
   }
 }

@@ -1,23 +1,19 @@
 import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
-import qwik from '@qwikdev/astro';
-
 import tailwind from "@astrojs/tailwind";
-import { qwikReact } from '@builder.io/qwik-react/vite';
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    qwik(),
-    // react({ include: "**/react/*"}), 
+    react(),
     tailwind()
   ],
-  base: 'demo-template',
+  base: 'demo-template/',
   site: "https://localhost:4321",
   vite: {
-    plugins: [
-      qwikReact(),
-    ],
+    // plugins: [
+    //   qwikReact(),
+    // ],
     server: {
       fs: {
         strict: false

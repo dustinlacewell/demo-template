@@ -1,3 +1,2 @@
-import './styles/tailwind.css';
-
-export * from './react';
+export * from './Canvas';
+export * from './Three';

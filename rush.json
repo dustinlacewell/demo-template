@@ -374,10 +374,6 @@
       "projectFolder": "libs/demo-lib-react"
     },
     {
-      "packageName": "@ldlework/demo-lib-qwik",
-      "projectFolder": "libs/demo-lib-qwik"
-    },
-    {
       "packageName": "demo",
       "projectFolder": "demo"
     }
