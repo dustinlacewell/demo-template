@@ -15,6 +15,10 @@
     },
     "./dist/style.css": "./dist/style.css"
   },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
